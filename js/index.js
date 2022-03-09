@@ -172,7 +172,7 @@ function win(){
 	
 	
 	
-	if (youS == 2 || youS >= 2) {
+	if (youS == 5 || youS >= 5) {
 		console.log("you pass");
 		setTimeout(function() {location.reload()}, 2000*2);
 			document.getElementById("popp").style.display="block";
