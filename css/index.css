@@ -14,10 +14,11 @@ body{
 	width: 90%;
 	height: 40px;
 	margin-top: 40%;
+	margin-left: 5%;
 	font-size: 30px;
 	background: yellow;
 	border-radius: 15px;
-	
+	display: none;
 }
 #main{
 	margin-top: 10%;
@@ -82,4 +83,13 @@ p{
 }
 #imoshan{
 	width: 50%;
+}
+#loding{
+	width: 90%;
+	height:70px;
+	margin-left: 5%;
+	background: #00ffda;
+	border-radius: 100px;
+	border: 1px solid black;
+	margin-top: 50%;
 }

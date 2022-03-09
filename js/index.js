@@ -3,10 +3,13 @@ op = "";
 youS = 0;
 opS = 0;
 
-
+function load() {
+	document.getElementById("loding").style.display="none"
+	document.getElementById("popButton").style.display="block"
+}
 
 function pop(){
-	console.log("loding")
+	console.log("loding");
 	window.onload = start();
 }
 
@@ -40,7 +43,7 @@ function anm(){
 			p = "img/"+lst[m]+".png";
 			document.getElementById("m2").src=p;
 			if (pp == 19 ) {
-				ran()
+				ran();
 			}
 			//console.log(pp)
 			m=m+1;
@@ -62,7 +65,7 @@ function ran(){
 	op = m;
 	console.log(you);
 	console.log(m);
-	gameLogic()
+	gameLogic();
 }
 
 
@@ -72,7 +75,7 @@ function gameLogic(){
 		
 		document.getElementById("popp").style.display="block";
 		document.getElementById("imoshan").src="img/no.gif";
-		document.getElementById("poppH1").innerHTML="Nobody Scored"
+		document.getElementById("poppH1").innerHTML="Nobody Scored";
 		
 		t = 0;
 		for (var i = 0; i < 5; i++) {
@@ -80,14 +83,11 @@ function gameLogic(){
 		
 	}
 		
-		
-		
-		
 		function fe(i){
-			setTimeout(function() {t = t+1
-			console.log(i)
+			setTimeout(function() {t = t+1;
+			//console.log(i);
 				if (t == 5) {
-					document.getElementById("popp").style.display="none"
+					document.getElementById("popp").style.display="none";
 					document.getElementById("m1").src="img/start.png";
 					document.getElementById("m2").src="img/start.png";
 				}else{
@@ -102,66 +102,43 @@ function gameLogic(){
 		
 	}else if(you == "r" && op == "p" || you =="p" && op == "s" || you == "s" && op == "r"){
 		console.log("opponent win");
-		opS = opS+1
-		document.getElementById("os").innerHTML=opS;
+		opS = opS+1;
+		
+		setTimeout(function() {document.getElementById("popp").style.display="none";}, 3000);
+		document.getElementById("imoshan").src="img/smile.gif"
 		document.getElementById("popp").style.display="block";
-		document.getElementById("imoshan").src="img/smile.gif";
-		document.getElementById("poppH1").innerHTML="Me Scored"
-		t = 0;
-		for (var i = 0; i < 5; i++) {
-		fe(i);
-		
-	}
+		//document.getElementById("imoshan").src="img/meWin.gif";
+		document.getElementById("poppH1").innerHTML="Me Scored";
+		document.getElementById("us").innerHTML=youS;
+		document.getElementById("os").innerHTML=opS;
 		
 		
 		
 		
-		function fe(i){
-			setTimeout(function() {t = t+1
-			console.log(i)
-				if (t == 5) {
-					document.getElementById("popp").style.display="none"
-					document.getElementById("m1").src="img/start.png";
-					document.getElementById("m2").src="img/start.png";
-				}else{
-					document.getElementById("popp").style.display="block"
-				}
-			}, 1000*i);
-	}
 		
 		
+		win();
 		
 	}else if (op == "r" && you == "p" || op == "p" && you == "s" || op == "s" && you == "r") {
 		console.log("you win");
 		youS = youS+1;
-		document.getElementById("us").innerHTML=youS;
+		
+			setTimeout(function() {document.getElementById("popp").style.display="none";}, 3000);
+		document.getElementById("imoshan").src="img/sad.gif"
 		document.getElementById("popp").style.display="block";
-		document.getElementById("imoshan").src="img/sad.gif";
-		document.getElementById("poppH1").innerHTML="You Scored"
+		//document.getElementById("imoshan").src="img/meWin.gif";
+		document.getElementById("poppH1").innerHTML="You Scored";
+		document.getElementById("us").innerHTML=youS;
+		document.getElementById("os").innerHTML=opS;
 		
-		t = 0;
 		
 		
-		for (var i = 0; i < 5; i++) {
-		fe(i);
-		
-	}
-		
-		function fe(i){
-			setTimeout(function() {t = t+1
-			console.log(i)
-				if (t == 5) {
-					document.getElementById("popp").style.display="none"
-					document.getElementById("m1").src="img/start.png";
-					document.getElementById("m2").src="img/start.png";
-				}else{
-					document.getElementById("popp").style.display="block"
-				}
-			}, 1000*i);
+
 		}
+		win();
 	}
-	win();
-}
+
+	
 
 
 
@@ -173,13 +150,15 @@ function win(){
 	
 	
 	if (youS == 5 || youS >= 5) {
-		console.log("you pass");
-		setTimeout(function() {location.reload()}, 2000*2);
-			document.getElementById("popp").style.display="block";
+		console.log(youS);
+		alert("tst");
+		setTimeout(function() {location.reload()}, 5000);
 		document.getElementById("imoshan").src="img/youWin.gif";
-		document.getElementById("poppH1").innerHTML="Congratulations"
+			document.getElementById("popp").style.display="block";
+		document.getElementById("poppH1").innerHTML="Congratulations";
+		document.getElementById("btMain").style.display="none";
 		
-		t = 0;
+		
 		
 		
 		
@@ -188,13 +167,14 @@ function win(){
 	if (opS == 5 || opS >= 5) {
 		console.log("op pass");
 		console.log("you pass");
-		setTimeout(function() {location.reload()}, 2000*2);
-		
+		setTimeout(function() {location.reload();}, 5000);
+		document.getElementById("imoshan").src="img/meWin.gif"
 		document.getElementById("popp").style.display="block";
-		document.getElementById("imoshan").src="img/meWin.gif";
-		document.getElementById("poppH1").innerHTML="You Loser"
+		//document.getElementById("imoshan").src="img/meWin.gif";
+		document.getElementById("poppH1").innerHTML="You Loser";
+		document.getElementById("btMain").style.display="none";
 		
-		location.reload()
+		
 		
 		
 		
