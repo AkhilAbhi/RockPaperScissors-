@@ -172,8 +172,9 @@ function win(){
 	
 	
 	
-	if (youS == 5 || youS >= 5) {
+	if (youS == 2 || youS >= 2) {
 		console.log("you pass");
+		setTimeout(function() {location.reload()}, 2000*2);
 			document.getElementById("popp").style.display="block";
 		document.getElementById("imoshan").src="img/youWin.gif";
 		document.getElementById("poppH1").innerHTML="Congratulations"
@@ -186,12 +187,14 @@ function win(){
 		}
 	if (opS == 5 || opS >= 5) {
 		console.log("op pass");
-		
+		console.log("you pass");
+		setTimeout(function() {location.reload()}, 2000*2);
 		
 		document.getElementById("popp").style.display="block";
 		document.getElementById("imoshan").src="img/meWin.gif";
 		document.getElementById("poppH1").innerHTML="You Loser"
 		
+		location.reload()
 		
 		
 		
