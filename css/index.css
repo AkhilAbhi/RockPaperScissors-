@@ -1,0 +1,85 @@
+body{
+	padding: 0;
+	margin: 0;
+	background: #00ff3c;
+	text-align: center;
+}
+.head h1{
+	text-align: center;
+}
+#h{
+	color: #ed3302;
+}
+#popButton{
+	width: 90%;
+	height: 40px;
+	margin-top: 40%;
+	font-size: 30px;
+	background: yellow;
+	border-radius: 15px;
+	
+}
+#main{
+	margin-top: 10%;
+	display: none;
+}
+#main h3{
+	text-align: left;
+	margin-left: 10px;
+}
+#us,#os{
+	color: red;
+}
+#screen{
+	width: 100%;
+	height: 170px;
+	background: black;
+	margin-bottom: 10px;
+}
+.img{
+	border: 1px solid white;
+	border-radius: 10px;
+	width: 40%;
+	float: left;
+	height: 100px;
+	margin-left: 7%;
+	margin-top: 30px;
+}
+#m1,#m2{
+	width: 50%;
+	margin-bottom: 10px;
+}
+p{
+	
+	margin-top: -30px;
+	color: white;
+}
+.um1 img,.um2 img,.um3 img{
+	width:40% ;
+}
+.um,.um1,.um2,.um3{
+	width: 70%;
+	border-radius: 10px;
+	border: 1px solid black;
+	margin-top: 20px;
+	margin-left: 15%;
+}
+.uh{
+	color: black;
+}
+
+#popp{
+	position: fixed;
+	margin-top: 10%;
+	width: 100%;
+	height: 400px;
+	display: none;
+	background:rgba(0, 0, 0, 0.56);
+}
+#popp h1{
+	color: white;
+	
+}
+#imoshan{
+	width: 50%;
+}
